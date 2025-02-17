@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra clone</title>
+    <link rel="stylesheet" href="myntra.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+</head>
+<body>
+    <header>
+        <div class="logocontainer">
+            <a href="#"><img class="logo" src="web pages/myntra.jpg"></a>
+        </div>
+        <nav class="navbar">
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Home&Living</a>
+            <a href="#">Beauty</a>
+            <a href="#">Studio<sup>New</sup></a>
+        </nav>
+        <div class="searchbar">
+            <span class="material-symbols-outlined searchicon">
+                search
+                </span>
+            <input class="search-input" placeholder="Search for Products,Brands and more">  
+        </div>
+
+       
+        <div class="actionbar">
+            <div class="action-container">
+                <span class="material-symbols-outlined action-icon">
+                    person
+                    </span>
+                <span class="action-name">Profile</span>
+                
+            </div>
+            <div class="action-container">
+                <span class="material-symbols-outlined action-icon">
+                    favorite
+                    </span>
+                <span class="action-name">Wishlist</span>
+                
+            </div>
+            <div class="action-container">
+                <span class="material-symbols-outlined action-icon">
+                    shopping_bag
+                    </span>
+                <span class="action-name">Bag</span>
+                
+            </div>
+
+        </div>     
+    </header>
+    <main>
+        <div class="banner">
+            <img class="banner-image" src="web pages/banner.jpg" alt="main banner">
+        </div>
+        <div class="categories">MEDAL WORTHY BRANDS TO BAG</div>
+        <div class="categoriesitems">
+            <a><img class="offerimages" src="web pages/offer/offer1.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer2.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer3.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer4.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer5.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer6.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer7.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer8.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer9.jpg"></a>
+            <a><img class="offerimages" src="web pages/offer/offer10.jpg"></a>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+            </div>
+
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+            </div>
+        </div>
+        <hr>
+
+        <div class="copyright">
+            © 2023 www.myntra.com. All rights reserved.
+        </div>
+
+    </footer>
+</body>
+</html>
