@@ -18,87 +18,84 @@
 <body>
     <h1>Bat Ball Stump Game</h1>
     <button class="button" onclick="
-    generatesComputerChoice();
+    computerchoice = generatesComputerChoice();
     console.log('you have chosen bat');
-    
-    let result;
+    resultMsg = result('Bat',computerchoice);
     console.log(`computer chioce is ${computerchoice}`);
-    if (computerchoice === 'Ball'){
-        result = 'user won';
-    }
-    else if (computerchoice === 'Stump'){
-        result='computer won';
-    }
-    else{
-        result='Match tied';
-    }
-    alert(`your choice is bat. Computer choice is ${computerchoice} and result is: ${result}`);
-    
-    
-    
+    showResult('Bat',computerchoice,resultMsg);
     ">Bat</button>
-    <button class="button" onclick="
-    generatesComputerChoice();
-    console.log('you have chosen ball');
-    
-    let result;
-    console.log(`computer chioce is ${computerchoice}`);
-    if (computerchoice === 'Ball'){
-        result = 'Match tied';
-    }
-    else if (computerchoice === 'Stump'){
-        result='User won';
-    }
-    else{
-        result='Computer won';
-    }
-    alert(`your choice is ball. Computer choice is ${computerchoice} and result is: ${result}`);
-    
-    
-    
-    ">Ball</button>
 
+    <button class="button" onclick="
+    computerchoice = generatesComputerChoice();
+    console.log('you have chosen ball');
+    resultMsg = result('Ball',computerchoice);
+    console.log(`computer chioce is ${computerchoice}`);
+    showResult('Ball',computerchoice,resultMsg);
+    ">Ball</button>
+    
     <button class="button" onclick="
     console.log('you have chosen stump');
-    generatesComputerChoice();
-    let result;
+    computerchoice = generatesComputerChoice();
+    resultMsg = result('Stump',computerchoice);
     console.log(`computer chioce is ${computerchoice}`);
-    if (computerchoice === 'Ball'){
-        result = 'computer won';
-    }
-    else if (computerchoice === 'Stump'){
-        result='Match tied';
-    }
-    else{
-        result='User won';
-    }
-    alert(`your choice is stump. Computer choice is ${computerchoice} and result is: ${result}`);
-    
-    
-    
+    showResult('Stump',computerchoice,resultMsg);
     ">Stump</button>
-
-
     <script>
-        let computerchoice;
+        
         function generatesComputerChoice(){
             let randomNumber = Math.random() * 3 ;
-            computerchoice;
+            
             if (randomNumber>0 && randomNumber<=1){
-              computerchoice = 'Bat';
+              return 'Bat';
         // console.log('computer choice is Bat');
     }
             else if (randomNumber>1 && randomNumber<=2){
-              computerchoice = 'Ball';
+              return 'Ball';
         // console.log('computer choice is Ball');
     }
             else {
-              computerchoice = 'Stump';
+              return 'Stump';
         // console.log('computer choice is Stump');
     }
         }
 
-
+        function result(userMove,computerMove){
+           if (userMove==='Bat'){
+            if (computerMove==='Bat'){
+                return 'Match tied';
+            }
+            else if (computerMove==='Ball'){
+                return ' user won';
+            }
+            else {
+                return 'computer won';
+            }
+           }
+           if (userMove==='Ball'){
+            if (computerMove==='Bat'){
+                return 'Computer won';
+            }
+            else if (computerMove==='Ball'){
+                return ' Match tied';
+            }
+            else {
+                return 'user won';
+            }
+           if (userMove==='stump'){
+            if (computerMove==='Bat'){
+                return 'user won';
+            }
+            else if (computerMove==='Ball'){
+                return ' computer won';
+            }
+            else {
+                return 'Match tied';
+            }}
+           }
+        }
+        function showResult(userMove,computerMove,resultMsg){
+            alert(`Your have chosen ${userMove} and Computer choice is ${computerMove} and result is ${resultMsg}`)
+        }
     </script>
 </body>
 
