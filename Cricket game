@@ -109,8 +109,9 @@
            }
         
         function showResult(userMove,computerMove,resultMsg){
-            console.log(score);
-            alert(`Your have chosen ${userMove} and Computer choice is ${computerMove} and result is ${resultMsg}`)
+            // console.log(score);
+            alert(`Your have chosen ${userMove} and Computer choice is ${computerMove} and result is ${resultMsg} 
+             won:${score.win},lose:${score.lose},tied:${score.tie}`)
         }
     </script>
 </body>
