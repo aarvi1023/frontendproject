@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+        .chat-container {
+            width: 300px;
+            border: 1px solid #ccc;
+            background: white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .chat-box {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+            background: #fafafa;
+        }
+        .message {
+            padding: 8px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .user {
+            background: #d1e7dd;
+            text-align: right;
+        }
+        .bot {
+            background: #f8d7da;
+            text-align: left;
+        }
+        .input-box {
+            display: flex;
+            border-top: 1px solid #ccc;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function botResponse(input) {
+            const responses = {
+                "hello": "Hi there! How can I assist you?",
+                "how are you": "I'm just a bot, but I'm doing great!",
+                "bye": "Goodbye! Have a nice day!",
+                "default": "I'm not sure how to respond to that."
+            };
+            return responses[input.toLowerCase()] || responses["default"];
+        }
+
+        function sendMessage() {
+            let userInput = document.getElementById("user-input").value.trim();
+            if (!userInput) return;
+
+            let chatBox = document.getElementById("chat-box");
+
+            // Add user message
+            let userMessage = document.createElement("div");
+            userMessage.className = "message user";
+            userMessage.textContent = userInput;
+            chatBox.appendChild(userMessage);
+
+            // Add bot response
+            let botMessage = document.createElement("div");
+            botMessage.className = "message bot";
+            botMessage.textContent = botResponse(userInput);
+            setTimeout(() => {
+                chatBox.appendChild(botMessage);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 500);
+
+            // Clear input
+            document.getElementById("user-input").value = "";
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
