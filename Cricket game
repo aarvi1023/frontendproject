@@ -129,7 +129,7 @@
                 return ' Match tied';
             }
             else {
-                score.tie ++ ;
+                score.win ++ ;
                 return 'user won';
             }}
 
